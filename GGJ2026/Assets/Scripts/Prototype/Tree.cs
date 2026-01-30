@@ -13,4 +13,16 @@ public class Tree : MonoBehaviour
     {
         
     }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.CompareTag("Player"))
+        {
+            ItemType holdingItem = coll.gameObject.GetComponent<ItemCollectionController>().GetHoldingItem();
+            if (holdingItem == ItemType.AXE)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+    }
 }

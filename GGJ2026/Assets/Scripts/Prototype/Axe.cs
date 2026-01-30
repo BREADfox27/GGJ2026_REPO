@@ -1,16 +1,23 @@
 using UnityEngine;
 
-public class Axe : MonoBehaviour
+public class Axe : Item
 {
+    //[SerializeField] private Items type = Items.AXE;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    //void Start()
+    //{
         
-    }
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
         
-    }
+    //}
+
+    //public override void Interact()
+    //{
+        
+    //}
+
 }

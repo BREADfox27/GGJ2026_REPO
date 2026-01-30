@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private SimplePlayerController player;
     private TimeLine currentTimeLine = TimeLine.PRESENT;
 
+
     void Awake()
     {
         if (Instance != null && Instance != this)
