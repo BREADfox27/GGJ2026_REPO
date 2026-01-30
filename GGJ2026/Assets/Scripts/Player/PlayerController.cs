@@ -30,11 +30,15 @@ public class PlayerController : MonoBehaviour
 
     void Movement()
     {
-
+        horizontalInput = Input.GetAxis("Horizontal");
+        playerRb.linearVelocity = new Vector2(horizontalInput * speed, playerRb.linearVelocity.y);
     }
 
     void Jump()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
 }
