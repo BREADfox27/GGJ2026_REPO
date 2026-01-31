@@ -5,11 +5,26 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject creditsMenu;
     public GameObject controlsMenu;
+    public GameObject masksMenu;
     
     void Start()
     {
         creditsMenu.gameObject.SetActive(false);
         controlsMenu.gameObject.SetActive(false);
+        masksMenu.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            controlsMenu.gameObject.SetActive(true);
+        }
+
+        while (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            masksMenu.gameObject.SetActive(true);
+        }
     }
     
     public void Play()
@@ -32,10 +47,11 @@ public class MenuManager : MonoBehaviour
         controlsMenu.gameObject.SetActive(true);
     }
 
-    public void ExitCreditsAndControls()
+    public void ExitMenu()
     {
         creditsMenu.gameObject.SetActive(false);
         controlsMenu.gameObject.SetActive(false);
+        masksMenu.gameObject.SetActive(false);
     }
 
     public void Exit()
