@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 478911546}
   - component: {fileID: 478911547}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1070,13 +1070,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478911545}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.07, y: 1.64, z: 0}
-  m_LocalScale: {x: 1.3776016, y: 1.3776016, z: 1.3776016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.04, y: 1.61, z: 0}
+  m_LocalScale: {x: 0.42500523, y: 0.42500523, z: 0.42500523}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 398128258}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &478911547
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1124,12 +1124,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -2224474878120320963, guid: 0564e172d2556f84cb6d6bff0dd2007a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.98, y: 3.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

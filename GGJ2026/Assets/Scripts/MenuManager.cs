@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
-{
+{    
     public GameObject creditsMenu;
     public GameObject controlsMenu;
     public GameObject masksMenu;
@@ -25,7 +25,6 @@ public class MenuManager : MonoBehaviour
         {
             masksMenu.gameObject.SetActive(true);
         }
-
 
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
