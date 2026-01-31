@@ -5,8 +5,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance { get; private set; }
 
     [SerializeField] private SimplePlayerController player;
-    private TimeLine currentTimeLine = TimeLine.PRESENT;
-
+    [SerializeField] TimeLine currentTimeLine = TimeLine.PRESENT;
 
     void Awake()
     {
