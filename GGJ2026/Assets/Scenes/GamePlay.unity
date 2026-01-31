@@ -423,7 +423,6 @@ MonoBehaviour:
     m_Bits: 65536
   isGrounded: 0
   groundCheck: {fileID: 1084295200}
-  musicToPlay: 1
 --- !u!95 &193891510
 Animator:
   serializedVersion: 7
@@ -1320,6 +1319,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4911630326939914509, guid: 8ae9044e6556390468335b46807c6a5c, type: 3}
+      propertyPath: musicToPlay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6408053086003138687, guid: 8ae9044e6556390468335b46807c6a5c, type: 3}
       propertyPath: m_Name
       value: AudioManager
