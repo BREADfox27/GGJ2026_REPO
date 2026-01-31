@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
         //Flip
         if (horizontalInput > 0)
         {
+            anim.SetBool("Idle", true);
             if (!isFacingRight)
             {
                 Flip();
@@ -48,10 +49,16 @@ public class PlayerController : MonoBehaviour
 
         if (horizontalInput < 0)
         {
+            anim.SetBool("Idle", true);
             if (isFacingRight)
             {
                 Flip();
             }
+        }
+
+        else if (horizontalInput == 0)
+        {
+            anim.SetBool("Idle", false);
         }
     }
 
