@@ -3,13 +3,28 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject creditsMenu;
+    
+    void Start()
+    {
+        creditsMenu.gameObject.SetActive(false);
+    }
+    
     public void Play()
     {
         SceneManager.LoadScene("GamePlay");
     }
 
-    // Update is called once per frame
+    public void Credits()
+    {
+        creditsMenu.gameObject.SetActive(true);
+    }
+
+    public void ExitCredits()
+    {
+        creditsMenu.gameObject.SetActive(false);
+    }
+
     public void Exit()
     {
         Application.Quit();

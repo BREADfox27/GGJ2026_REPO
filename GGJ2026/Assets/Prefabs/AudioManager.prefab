@@ -307,7 +307,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicList:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   sfxList:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   musicSource: {fileID: 355189549018005510}
   sfxSource: {fileID: 2269851179070894049}
