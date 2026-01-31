@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Source References")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {

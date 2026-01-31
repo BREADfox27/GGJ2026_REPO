@@ -14,14 +14,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool isGrounded;
     [SerializeField] GameObject groundCheck;
 
-    [SerializeField] int musicToPlay;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        AudioManager.Instance.PlayMusic(musicToPlay);
     }
 
     // Update is called once per frame
