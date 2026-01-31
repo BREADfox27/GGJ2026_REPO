@@ -8,6 +8,7 @@ TagManager:
   - TimeMask
   - Item
   - Stair
+  - Lift
   layers:
   - Default
   - TransparentFX
