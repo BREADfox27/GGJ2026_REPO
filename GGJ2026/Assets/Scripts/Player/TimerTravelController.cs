@@ -33,7 +33,7 @@ public class TimerTravelController : MonoBehaviour
         } else {
             if (interactedMask && Input.GetKeyDown(KeyCode.E))
             {
-                Interact();
+                //Interact();
             }
         }
     }
@@ -54,22 +54,22 @@ public class TimerTravelController : MonoBehaviour
         }
     }
 
-    void Interact() {
-        Vector2 destination = interactedMask.GetDestinationCoordinates();
-        TimeLine destinationTimeLine = interactedMask.GetDestinationTimeLine();
-        TimeLine currentTimeLine = LevelManager.Instance.GetCurrentTimeLine();
+    //void Interact() {
+    //    Vector2 destination = interactedMask.GetDestinationCoordinates();
+    //    TimeLine destinationTimeLine = interactedMask.GetDestinationTimeLine();
+    //    TimeLine currentTimeLine = LevelManager.Instance.GetCurrentTimeLine();
 
-        SimplePlayerController player = LevelManager.Instance.GetPlayer(); 
+    //    PlayerController player = LevelManager.Instance.GetPlayer(); 
 
-        if (destinationTimeLine == currentTimeLine) return;
+    //    if (destinationTimeLine == currentTimeLine) return;
 
-        if (player != null) 
-        {
-            player.TimeTravel(destination);
-            LevelManager.Instance.TimeTravel(destinationTimeLine);
+    //    if (player != null) 
+    //    {
+    //        player.TimeTravel(destination);
+    //        LevelManager.Instance.TimeTravel(destinationTimeLine);
 
-            interactedMask = null;
-        }
-    }
+    //        interactedMask = null;
+    //    }
+    //}
     
 }

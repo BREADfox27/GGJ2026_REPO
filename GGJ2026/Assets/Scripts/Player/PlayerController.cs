@@ -7,12 +7,14 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     
     public int speed;
-    public int jumpForce;
-    public LayerMask groundLayer;
     private bool isFacingRight;
 
-    [SerializeField] bool isGrounded;
-    [SerializeField] GameObject groundCheck;
+    //public int jumpForce;
+    //public LayerMask groundLayer;
+
+
+    //[SerializeField] bool isGrounded;
+    //[SerializeField] GameObject groundCheck;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,9 +26,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
         Movement();
-        Jump();
+        //Jump();
 
         //Flip
         if (horizontalInput > 0)
@@ -54,10 +56,10 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
-        {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        //{
+        //    playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+        //}
     }
 
     void Flip()

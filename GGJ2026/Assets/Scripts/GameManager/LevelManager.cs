@@ -5,7 +5,7 @@ public class LevelManager : MonoBehaviour
     const int TIME_Y_OFFSET = 50;
     public static LevelManager Instance { get; private set; }
 
-    [SerializeField] private SimplePlayerController player;
+    [SerializeField] private PlayerController player;
     [SerializeField] TimeLine currentTimeLine = TimeLine.PRESENT;
 
     void Awake()
@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour
         Instance = this;
     }
 
-    public SimplePlayerController GetPlayer()
+    public PlayerController GetPlayer()
     {
         return player;
     }
