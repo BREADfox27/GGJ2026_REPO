@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public GameObject creditsMenu;
+    public GameObject controlsMenu;
     
     void Start()
     {
         creditsMenu.gameObject.SetActive(false);
+        controlsMenu.gameObject.SetActive(false);
     }
     
     public void Play()
@@ -25,9 +27,15 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void ExitCredits()
+    public void Controls()
+    {
+        controlsMenu.gameObject.SetActive(true);
+    }
+
+    public void ExitCreditsAndControls()
     {
         creditsMenu.gameObject.SetActive(false);
+        controlsMenu.gameObject.SetActive(false);
     }
 
     public void Exit()
