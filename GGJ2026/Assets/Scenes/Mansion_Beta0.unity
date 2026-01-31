@@ -1640,7 +1640,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 1685943112}
+    TrackingTarget: {fileID: 541043783}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -1672,7 +1672,7 @@ Transform:
   m_GameObject: {fileID: 924408586}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28, y: -14.799999, z: -10}
+  m_LocalPosition: {x: 30.04742, y: -17.57, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1688,11 +1688,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1519686388601532308, guid: 3e221a4ef51d72644a1f0804def8956c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28
+      value: 30.04742
       objectReference: {fileID: 0}
     - target: {fileID: 1519686388601532308, guid: 3e221a4ef51d72644a1f0804def8956c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.799999
+      value: -17.57
       objectReference: {fileID: 0}
     - target: {fileID: 1519686388601532308, guid: 3e221a4ef51d72644a1f0804def8956c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2635,11 +2635,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!4 &1685943112 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8021579704660738018, guid: 48ab3fa0c02c21241a934f577db8f241, type: 3}
-  m_PrefabInstance: {fileID: 1982180142}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1685943113 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8768556692666346184, guid: 48ab3fa0c02c21241a934f577db8f241, type: 3}
