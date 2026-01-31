@@ -71,6 +71,8 @@ public class LevelManager : MonoBehaviour
         {
             player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + TIME_Y_OFFSET * 2);
         }
+
+        player.ChangeSprite(TimeLine.PAST);
     }
 
     public void GoToPresent()
@@ -89,6 +91,8 @@ public class LevelManager : MonoBehaviour
             player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + TIME_Y_OFFSET);
         }
 
+        player.ChangeSprite(TimeLine.PRESENT);
+
     }
 
     public void GoToFuture()
@@ -106,6 +110,8 @@ public class LevelManager : MonoBehaviour
         {
             player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y - TIME_Y_OFFSET);
         }
+
+        player.ChangeSprite(TimeLine.FUTURE);
     }
 
     public void RegisterDoor(Door door)

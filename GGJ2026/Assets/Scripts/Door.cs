@@ -7,6 +7,10 @@ public class Door : MonoBehaviour
 
     [SerializeField] private ItemType unlockWith = ItemType.UNIVERSAL_KEY;
 
+    [SerializeField] private bool openFromLeft = false;
+    [SerializeField] private bool openFromRight = false;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,6 +51,11 @@ public class Door : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             if (!isLocked)  return;
+
+            Vector3 relativePos = transform.InverseTransformPoint(collision.transform.position);
+
+            if (relativePos.x < 0 && !openFromLeft) return;
+            if (relativePos.x > 0 && !openFromRight) return;
 
             ItemType playerItem = collision.gameObject.GetComponent<ItemCollectionController>().GetHoldingItem();
             if (playerItem == unlockWith)

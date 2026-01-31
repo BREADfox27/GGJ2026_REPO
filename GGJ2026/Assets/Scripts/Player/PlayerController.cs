@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class PlayerController : MonoBehaviour
     
     public int speed;
     private bool isFacingRight;
+
+    [SerializeField] Sprite playerPast;
+    [SerializeField] Sprite playerPresent;
+    [SerializeField] Sprite playerFuture;
 
     //public int jumpForce;
     //public LayerMask groundLayer;
@@ -21,6 +26,8 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = playerPresent;
     }
 
     // Update is called once per frame
@@ -68,5 +75,21 @@ public class PlayerController : MonoBehaviour
         currentScale.x *= -1;
         transform.localScale = currentScale;
         isFacingRight = !isFacingRight;
+    }
+
+    public void ChangeSprite(TimeLine timeLine)
+    {
+        switch (timeLine)
+        {
+            case TimeLine.PAST:
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = playerPast;
+                break;
+            case TimeLine.PRESENT:
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = playerPresent;
+                break;
+            case TimeLine.FUTURE:
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = playerFuture;
+                break;
+        }
     }
 }
