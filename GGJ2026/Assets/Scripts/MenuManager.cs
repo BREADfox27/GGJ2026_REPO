@@ -21,7 +21,7 @@ public class MenuManager : MonoBehaviour
             controlsMenu.gameObject.SetActive(true);
         }
 
-        while (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             masksMenu.gameObject.SetActive(true);
         }
