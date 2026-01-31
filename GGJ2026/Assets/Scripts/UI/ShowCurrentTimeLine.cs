@@ -12,6 +12,7 @@ public class ShowCurrentTimeLine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeLineText.text = "Current in: " + LevelManager.Instance.GetCurrentTimeLineString();
+        //timeLineText.text = "Current in: " + LevelManager.Instance.GetCurrentTimeLineString();
+        timeLineText.text = LevelManager.Instance.DoorStatusReport();
     }
 }

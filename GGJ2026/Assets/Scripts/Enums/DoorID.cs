@@ -1,0 +1,11 @@
+public enum DoorID
+{
+    PAST_DOOR1,
+    PAST_DOOR2,
+
+    PRESENT_DOOR1,
+    PRESENT_DOOR2,
+
+    FUTURE_DOOR1,
+    FUTURE_DOOR2
+}

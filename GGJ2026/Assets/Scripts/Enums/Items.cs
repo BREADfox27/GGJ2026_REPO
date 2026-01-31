@@ -1,5 +1,6 @@
 public enum ItemType
 {
     NONE,
-    AXE
+    AXE,
+    UNIVERSAL_KEY,
 }

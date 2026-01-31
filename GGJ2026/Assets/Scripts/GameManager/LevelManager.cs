@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -7,6 +8,7 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private PlayerController player;
     [SerializeField] TimeLine currentTimeLine = TimeLine.PRESENT;
+    [SerializeField] private List<Door> doors = new List<Door>();
 
     void Awake()
     {
@@ -104,6 +106,25 @@ public class LevelManager : MonoBehaviour
         {
             player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y - TIME_Y_OFFSET);
         }
+    }
+
+    public void RegisterDoor(Door door)
+    {
+        if (!doors.Contains(door))
+        {
+            doors.Add(door);
+        }
+    }
+
+    public string DoorStatusReport()
+    {
+        string report = "Doors in Level:\n";
+
+        foreach (Door door in doors)
+        {
+            report += $"- Door ID: {door.GetID()}, Locked: {door.IsLocked().ToString()}\n";
+        }
+        return report;
     }
 
 }
