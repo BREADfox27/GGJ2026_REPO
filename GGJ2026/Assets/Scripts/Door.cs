@@ -61,6 +61,7 @@ public class Door : MonoBehaviour
             if (playerItem == unlockWith)
             {
                 Unlock();
+                collision.gameObject.GetComponent<ItemCollectionController>().ConsumeHoldingItem();
             }
             
         }

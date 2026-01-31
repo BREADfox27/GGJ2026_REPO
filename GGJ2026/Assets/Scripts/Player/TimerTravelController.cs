@@ -5,6 +5,10 @@ public class TimerTravelController : MonoBehaviour
     private TimeMask interactedMask = null;
     public bool newTimeTravelMechanic = true;
 
+    public bool CanTravelPresent = true;
+    public bool CanTravelPast = false;
+    public bool CanTravelFuture = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,15 +21,15 @@ public class TimerTravelController : MonoBehaviour
         if (newTimeTravelMechanic) {
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                if (Input.GetKeyDown(KeyCode.A))
+                if (Input.GetKeyDown(KeyCode.J) && CanTravelPast)
                 {
                     LevelManager.Instance.TimeTravel(TimeLine.PAST);
                 }
-                else if (Input.GetKeyDown(KeyCode.W))
+                else if (Input.GetKeyDown(KeyCode.K) && CanTravelPresent)
                 {
                     LevelManager.Instance.TimeTravel(TimeLine.PRESENT);
                 }
-                else if (Input.GetKeyDown(KeyCode.D))
+                else if (Input.GetKeyDown(KeyCode.L) && CanTravelFuture)
                 {
                     LevelManager.Instance.TimeTravel(TimeLine.FUTURE);
                 }

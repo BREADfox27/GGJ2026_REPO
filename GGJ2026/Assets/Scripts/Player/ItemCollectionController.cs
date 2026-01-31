@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Unity.Cinemachine.CinemachineOrbitalTransposer;
 
 public class ItemCollectionController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class ItemCollectionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        holdingItemText.text = "Holding: " + holdingItem.ToString();
         if (Input.GetKeyDown(KeyCode.E) && interactedItem)
         {
             Interact();
@@ -46,12 +48,17 @@ public class ItemCollectionController : MonoBehaviour
             Destroy(interactedItem.gameObject);
             interactedItem = null;
 
-            holdingItemText.text = "Holding: " + holdingItem.ToString();
+
         }
     }
 
     public ItemType GetHoldingItem()
     {
         return holdingItem;
+    }
+
+    public void ConsumeHoldingItem()
+    {
+        holdingItem = ItemType.NONE;
     }
 }
