@@ -34,7 +34,7 @@ public class MenuManager : MonoBehaviour
     
     public void Play()
     {
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene("Mansion_Beta0");
     }
 
     public void Credits()
