@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class GetPastMaskEvent : MonoBehaviour
+public class GetPresentMaskEvent : MonoBehaviour
 {
     private bool playerInside = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -16,7 +16,7 @@ public class GetPastMaskEvent : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                LevelManager.Instance.GetPlayer().GetComponent<TimerTravelController>().CanTravelPast = true;
+                LevelManager.Instance.GetPlayer().GetComponent<TimerTravelController>().CanTravelPresent = true;
                 gameObject.SetActive(false);
             }
         }

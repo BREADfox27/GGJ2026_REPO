@@ -2,12 +2,11 @@ using UnityEngine;
 
 public class InteractiveObjects : MonoBehaviour
 {
-    public GameObject text;
+    private GameObject text;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        text.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,7 +19,7 @@ public class InteractiveObjects : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            text.gameObject.SetActive(true);
+            LevelManager.Instance.ShowKeyBoardEImage();
         }
     }
 
@@ -28,6 +27,7 @@ public class InteractiveObjects : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            LevelManager.Instance.HideKeyBoardEImage();
             text.gameObject.SetActive(false);
         }
     }

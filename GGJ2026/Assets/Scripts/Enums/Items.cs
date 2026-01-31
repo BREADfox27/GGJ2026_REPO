@@ -5,4 +5,6 @@ public enum ItemType
     UNIVERSAL_KEY,
 
     CLIP,
+    PINCUSHION,
+
 }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,9 +11,9 @@ public class PlayerController : MonoBehaviour
     public int speed;
     private bool isFacingRight;
 
-    [SerializeField] Sprite playerPast;
-    [SerializeField] Sprite playerPresent;
-    [SerializeField] Sprite playerFuture;
+    //[SerializeField] GameObject presentMask;
+    [SerializeField] GameObject pastMask;
+    [SerializeField] GameObject futureMask;
 
     //public int jumpForce;
     //public LayerMask groundLayer;
@@ -26,8 +27,6 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = playerPresent;
     }
 
     // Update is called once per frame
@@ -89,13 +88,19 @@ public class PlayerController : MonoBehaviour
         switch (timeLine)
         {
             case TimeLine.PAST:
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = playerPast;
+                pastMask.SetActive(true);
+                //presentMask.SetActive(false);
+                futureMask.SetActive(false);
                 break;
             case TimeLine.PRESENT:
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = playerPresent;
+                pastMask.SetActive(false);
+                //presentMask.SetActive(true);
+                futureMask.SetActive(false);
                 break;
             case TimeLine.FUTURE:
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = playerFuture;
+                pastMask.SetActive(false);
+                //presentMask.SetActive(false);
+                futureMask.SetActive(true);
                 break;
         }
     }

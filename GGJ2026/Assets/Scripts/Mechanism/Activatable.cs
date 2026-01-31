@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class Activatable : MonoBehaviour
 {
-    [SerializeField] private EventID eventID;
+    [SerializeField] private ItemType itemToActivate;
+
     [SerializeField] private GameObject[] objectToShow;
+
+    private bool playerInside = false;
+    private bool activated = false;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,31 +19,44 @@ public class Activatable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public EventID GetEventID()
-    {
-        return eventID;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Activator otherActivator = other.GetComponent<Activator>();
-        if (otherActivator == null && other.attachedRigidbody != null)
+        if (playerInside)
         {
-            otherActivator = other.attachedRigidbody.GetComponent<Activator>();
-        }
-
-        if (otherActivator != null)
-        {
-            if (eventID == otherActivator.GetEventID())
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                foreach (GameObject obj in objectToShow)
+                ItemType playerItem = LevelManager.Instance.GetPlayer().GetComponent<ItemCollectionController>().GetHoldingItem();
+
+                if (playerItem == itemToActivate)
                 {
-                    if (obj != null) obj.SetActive(true);
+                    LevelManager.Instance.GetPlayer().GetComponent<ItemCollectionController>().ConsumeHoldingItem();
+                    foreach (GameObject obj in objectToShow)
+                    {
+                        obj.SetActive(true);
+                    }
+
+                    activated = true;
                 }
             }
+        }
+    }
+
+    public ItemType ItemToActivate()
+    {
+        return itemToActivate;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerInside = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerInside = false;
         }
     }
 }

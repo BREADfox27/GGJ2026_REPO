@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private PlayerController player;
     [SerializeField] TimeLine currentTimeLine = TimeLine.PRESENT;
     [SerializeField] private List<Door> doors = new List<Door>();
+    [SerializeField] private GameObject keyBoardEImage;
 
     void Awake()
     {
@@ -131,6 +132,22 @@ public class LevelManager : MonoBehaviour
             report += $"- Door ID: {door.GetID()}, Locked: {door.IsLocked().ToString()}\n";
         }
         return report;
+    }
+
+    public void ShowKeyBoardEImage()
+    {
+        if (keyBoardEImage != null)
+        {
+            keyBoardEImage.SetActive(true);
+        }
+    }
+
+    public void HideKeyBoardEImage()
+    {
+        if (keyBoardEImage != null)
+        {
+            keyBoardEImage.SetActive(false);
+        }
     }
 
 }

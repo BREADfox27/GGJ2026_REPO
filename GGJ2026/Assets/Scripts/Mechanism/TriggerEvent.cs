@@ -31,13 +31,13 @@ public class TriggerEvent : MonoBehaviour
 
         if (otherActivator != null)
         {
-            if (activatable.GetEventID() == otherActivator.GetEventID())
-            {
-                foreach (GameObject obj in objectToShow)
-                {
-                     if (obj != null) obj.SetActive(true);
-                }
-            }
+            //if (activatable.GetEventID() == otherActivator.GetEventID())
+            //{
+            //    foreach (GameObject obj in objectToShow)
+            //    {
+            //         if (obj != null) obj.SetActive(true);
+            //    }
+            //}
         }
     }
 }
