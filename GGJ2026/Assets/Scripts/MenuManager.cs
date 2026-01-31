@@ -20,6 +20,11 @@ public class MenuManager : MonoBehaviour
         creditsMenu.gameObject.SetActive(true);
     }
 
+    public void ReturnMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void ExitCredits()
     {
         creditsMenu.gameObject.SetActive(false);
