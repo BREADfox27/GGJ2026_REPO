@@ -3,6 +3,8 @@ using UnityEngine;
 public class TimerTravelController : MonoBehaviour
 {
     private TimeMask interactedMask = null;
+    public bool newTimeTravelMechanic = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,8 +14,27 @@ public class TimerTravelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (interactedMask && Input.GetKeyDown(KeyCode.E)) {
-            Interact();
+        if (newTimeTravelMechanic) {
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    LevelManager.Instance.TimeTravel(TimeLine.PAST);
+                }
+                else if (Input.GetKeyDown(KeyCode.W))
+                {
+                    LevelManager.Instance.TimeTravel(TimeLine.PRESENT);
+                }
+                else if (Input.GetKeyDown(KeyCode.D))
+                {
+                    LevelManager.Instance.TimeTravel(TimeLine.FUTURE);
+                }
+            }
+        } else {
+            if (interactedMask && Input.GetKeyDown(KeyCode.E))
+            {
+                Interact();
+            }
         }
     }
 
