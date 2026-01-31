@@ -28,7 +28,6 @@ public class InteractiveObjects : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             LevelManager.Instance.HideKeyBoardEImage();
-            text.gameObject.SetActive(false);
         }
     }
 
