@@ -569,9 +569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 7
-  playerPast: {fileID: 0}
-  playerPresent: {fileID: 0}
-  playerFuture: {fileID: 0}
+  pastMask: {fileID: 0}
+  futureMask: {fileID: 0}
 --- !u!1 &334458311
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 460d7e8bf3c7f0b4899083f65735a6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveObjects
-  text: {fileID: 478911545}
 --- !u!1 &419201943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,7 +1516,7 @@ GameObject:
   - component: {fileID: 745721487}
   - component: {fileID: 745721486}
   m_Layer: 5
-  m_Name: UI
+  m_Name: UI(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
