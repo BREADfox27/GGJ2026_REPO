@@ -4614,7 +4614,7 @@ PrefabInstance:
     - target: {fileID: 258602032603124751, guid: fa93a3cfdc1905749890b78f7867386c, type: 3}
       propertyPath: pastMask
       value: 
-      objectReference: {fileID: 1363550210}
+      objectReference: {fileID: 468303468}
     - target: {fileID: 258602032603124751, guid: fa93a3cfdc1905749890b78f7867386c, type: 3}
       propertyPath: pastMast
       value: 
@@ -4623,6 +4623,10 @@ PrefabInstance:
       propertyPath: futureMask
       value: 
       objectReference: {fileID: 468303468}
+    - target: {fileID: 258602032603124751, guid: fa93a3cfdc1905749890b78f7867386c, type: 3}
+      propertyPath: presentMask
+      value: 
+      objectReference: {fileID: 1363550210}
     - target: {fileID: 1312113501276133518, guid: fa93a3cfdc1905749890b78f7867386c, type: 3}
       propertyPath: m_IsActive
       value: 0
