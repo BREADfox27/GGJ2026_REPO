@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] GameObject presentMask;
     [SerializeField] GameObject pastMask;
-    //[SerializeField] GameObject futureMask;
+    [SerializeField] GameObject futureMask;
 
     //public int jumpForce;
     //public LayerMask groundLayer;
@@ -90,17 +90,17 @@ public class PlayerController : MonoBehaviour
             case TimeLine.PAST:
                 pastMask.SetActive(true);
                 presentMask.SetActive(false);
-                //futureMask.SetActive(false);
+                futureMask.SetActive(false);
                 break;
             case TimeLine.PRESENT:
                 pastMask.SetActive(false);
                 presentMask.SetActive(true);
-                //futureMask.SetActive(false);
+                futureMask.SetActive(false);
                 break;
             case TimeLine.FUTURE:
                 pastMask.SetActive(false);
                 presentMask.SetActive(false);
-                //futureMask.SetActive(true);
+                futureMask.SetActive(true);
                 break;
         }
     }
