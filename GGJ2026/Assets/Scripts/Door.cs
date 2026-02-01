@@ -10,6 +10,8 @@ public class Door : MonoBehaviour
     [SerializeField] private bool openFromLeft = false;
     [SerializeField] private bool openFromRight = false;
 
+    [SerializeField] private GameObject[] objectsToDissapear;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,6 +46,12 @@ public class Door : MonoBehaviour
     public void Unlock()
     {
         isLocked = false;
+        AudioManager.Instance.PlaySFX(2);
+
+        foreach (GameObject obj in objectsToDissapear)
+        {
+            obj.SetActive(false);
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -57,12 +65,9 @@ public class Door : MonoBehaviour
             if (relativePos.x < 0 && !openFromLeft) return;
             if (relativePos.x > 0 && !openFromRight) return;
 
-            ItemType playerItem = collision.gameObject.GetComponent<ItemCollectionController>().GetHoldingItem();
-            if (playerItem == unlockWith)
+            if (collision.gameObject.GetComponent<ItemCollectionController>().CheckHoldingItemExists(unlockWith))
             {
                 Unlock();
-                collision.gameObject.GetComponent<ItemCollectionController>().ConsumeHoldingItem();
-                AudioManager.Instance.PlaySFX(2);
             }
             
         }

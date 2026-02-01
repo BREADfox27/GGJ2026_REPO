@@ -7,7 +7,7 @@ public class Activatable : MonoBehaviour
     [SerializeField] private GameObject[] objectToShow;
 
     private bool playerInside = false;
-    private bool activated = false;
+    //private bool activated = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,17 +23,14 @@ public class Activatable : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                ItemType playerItem = LevelManager.Instance.GetPlayer().GetComponent<ItemCollectionController>().GetHoldingItem();
-
-                if (playerItem == itemToActivate)
+                if (LevelManager.Instance.GetPlayer().GetComponent<ItemCollectionController>().CheckHoldingItemExists(itemToActivate))
                 {
-                    LevelManager.Instance.GetPlayer().GetComponent<ItemCollectionController>().ConsumeHoldingItem();
                     foreach (GameObject obj in objectToShow)
                     {
                         obj.SetActive(true);
                     }
 
-                    activated = true;
+                    gameObject.SetActive(false);
                 }
             }
         }

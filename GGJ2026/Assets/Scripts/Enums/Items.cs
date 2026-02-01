@@ -6,5 +6,9 @@ public enum ItemType
 
     CLIP,
     PINCUSHION,
+    NEEDLE,
+    BREAD,
+    SNOWPLOW,
 
+    KEY_TO_LEVEL2,
 }

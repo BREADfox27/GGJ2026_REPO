@@ -1,9 +1,9 @@
 using UnityEngine;
-using static Unity.Cinemachine.CinemachineOrbitalTransposer;
+using System.Collections.Generic;
 
 public class ItemCollectionController : MonoBehaviour
 {
-    [SerializeField] private ItemType holdingItem = ItemType.NONE;
+    [SerializeField] private List<ItemType> itemList = new List<ItemType>();
     [SerializeField] private TMPro.TMP_Text holdingItemText;
 
 
@@ -17,7 +17,14 @@ public class ItemCollectionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        holdingItemText.text = "Holding: " + holdingItem.ToString();
+        string finalText = "Holding:  ";
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            finalText += itemList[i].ToString() + ", ";
+        }
+
+        holdingItemText.text = finalText;
+        
         if (Input.GetKeyDown(KeyCode.E) && interactedItem)
         {
             Interact();
@@ -37,7 +44,6 @@ public class ItemCollectionController : MonoBehaviour
         if (other.CompareTag("Item"))
         {
             interactedItem = null;
-            AudioManager.Instance.PlaySFX(3);
         }
     }
 
@@ -45,21 +51,25 @@ public class ItemCollectionController : MonoBehaviour
     {
         if (interactedItem != null)
         {
-            holdingItem = interactedItem.getItemType();
+            AudioManager.Instance.PlaySFX(3);
+            itemList.Add(interactedItem.getItemType());
             Destroy(interactedItem.gameObject);
             interactedItem = null;
-
-
         }
     }
 
-    public ItemType GetHoldingItem()
+    public bool CheckHoldingItemExists(ItemType item)
     {
-        return holdingItem;
+        if (itemList.Contains(item))
+        {
+            ConsumeHoldingItem(item);
+            return true;
+        }
+        return false;
     }
 
-    public void ConsumeHoldingItem()
+    private void ConsumeHoldingItem(ItemType item)
     {
-        holdingItem = ItemType.NONE;
+        itemList.Remove(item);
     }
 }

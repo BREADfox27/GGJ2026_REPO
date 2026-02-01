@@ -18,8 +18,7 @@ public class Tree : MonoBehaviour
     {
         if (coll.gameObject.CompareTag("Player"))
         {
-            ItemType holdingItem = coll.gameObject.GetComponent<ItemCollectionController>().GetHoldingItem();
-            if (holdingItem == ItemType.AXE)
+            if (coll.gameObject.GetComponent<ItemCollectionController>().CheckHoldingItemExists(ItemType.AXE))
             {
                 Destroy(this.gameObject);
             }
