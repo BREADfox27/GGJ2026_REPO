@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 272695ae2e5c3144d8a8ce6abbcf6368
+guid: 499e11fe111ca06458dd0da7f7408702
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5696464542739476731
-    second: "Mesita_L\xE1mpara_0"
+      213: -7287456775503779163
+    second: "Decoraci\xF3n_Entrada_0"
+  - first:
+      213: -5256476223775771213
+    second: "Decoraci\xF3n_Entrada_1"
+  - first:
+      213: 7444314132339616788
+    second: "Decoraci\xF3n_Entrada_2"
+  - first:
+      213: -1170917207160824936
+    second: "Decoraci\xF3n_Entrada_3"
+  - first:
+      213: 1232571338917591072
+    second: "Decoraci\xF3n_Entrada_4"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +164,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Mesita_L\xE1mpara_0"
+      name: "Decoraci\xF3n_Entrada_0"
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 69
-        height: 102
+        x: 18
+        y: 71
+        width: 56
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +179,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf038990258ed0f40800000000000000
-      internalID: 5696464542739476731
+      spriteID: 5aa651c5ca0cdda90800000000000000
+      internalID: -7287456775503779163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n_Entrada_1"
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 142
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b5fe8779be3d07b0800000000000000
+      internalID: -5256476223775771213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n_Entrada_2"
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 104
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ce58ef2448f4760800000000000000
+      internalID: 7444314132339616788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n_Entrada_3"
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 82
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b59cdf00110cfe0800000000000000
+      internalID: -1170917207160824936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Decoraci\xF3n_Entrada_4"
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 3
+        width: 59
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028b2803a19fa1110800000000000000
+      internalID: 1232571338917591072
       vertices: []
       indices: 
       edges: []
@@ -187,7 +287,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Mesita_L\xE1mpara_0": 5696464542739476731
+      "Decoraci\xF3n_Entrada_0": -7287456775503779163
+      "Decoraci\xF3n_Entrada_1": -5256476223775771213
+      "Decoraci\xF3n_Entrada_2": 7444314132339616788
+      "Decoraci\xF3n_Entrada_3": -1170917207160824936
+      "Decoraci\xF3n_Entrada_4": 1232571338917591072
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

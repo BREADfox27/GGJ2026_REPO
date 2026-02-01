@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 272695ae2e5c3144d8a8ce6abbcf6368
+guid: 15fd48b014703b648964ec8c121df22c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5696464542739476731
-    second: "Mesita_L\xE1mpara_0"
+      213: -8508935921241119522
+    second: Ducha_0
+  - first:
+      213: 1419106851947317864
+    second: Ducha_1
+  - first:
+      213: -4738966369288602910
+    second: Ducha_2
+  - first:
+      213: -926218865002895878
+    second: Ducha_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -152,13 +161,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Mesita_L\xE1mpara_0"
+      name: Ducha_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 69
-        height: 102
+        x: 2
+        y: 27
+        width: 135
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +176,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf038990258ed0f40800000000000000
-      internalID: 5696464542739476731
+      spriteID: ed4acd5acdf2ae980800000000000000
+      internalID: -8508935921241119522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ducha_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 126
+        width: 44
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a84a0c92ea1b310800000000000000
+      internalID: 1419106851947317864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ducha_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 74
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eab70cf13fcb3eb0800000000000000
+      internalID: -4738966369288602910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ducha_3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1
+        width: 122
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5ac3f79d86523f0800000000000000
+      internalID: -926218865002895878
       vertices: []
       indices: 
       edges: []
@@ -177,7 +252,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -187,7 +262,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Mesita_L\xE1mpara_0": 5696464542739476731
+      Ducha_0: -8508935921241119522
+      Ducha_1: 1419106851947317864
+      Ducha_2: -4738966369288602910
+      Ducha_3: -926218865002895878
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
