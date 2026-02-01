@@ -19,9 +19,11 @@ public class GoToLevel2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                LevelManager.Instance.GetPlayer().GetComponent<ItemCollectionController>().CheckHoldingItemExists(unlockWith);
-                
-                SceneManager.LoadScene("Mansion_Level2");
+                if (LevelManager.Instance.GetPlayer().GetComponent<ItemCollectionController>().CheckHoldingItemExists(unlockWith))
+                {
+                    // AudioManager.Instance.PlaySFX(2);
+                    SceneManager.LoadScene("Mansion_Level2");
+                }
             }
         }
     }
