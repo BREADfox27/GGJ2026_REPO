@@ -1619,6 +1619,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Silueta_mansi\xF3n_0 (2)"
       objectReference: {fileID: 0}
+    - target: {fileID: 3703281087179153004, guid: d754994d65a54a24bbbe2860f5d9b071, type: 3}
+      propertyPath: m_Size.y
+      value: 0.19121075
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703281087179153004, guid: d754994d65a54a24bbbe2860f5d9b071, type: 3}
+      propertyPath: m_Offset.y
+      value: -5.084395
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1903,6 +1911,14 @@ PrefabInstance:
     - target: {fileID: 1408427565536175623, guid: d754994d65a54a24bbbe2860f5d9b071, type: 3}
       propertyPath: m_Name
       value: "Silueta_mansi\xF3n_0 (3)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703281087179153004, guid: d754994d65a54a24bbbe2860f5d9b071, type: 3}
+      propertyPath: m_Size.y
+      value: 0.1926632
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703281087179153004, guid: d754994d65a54a24bbbe2860f5d9b071, type: 3}
+      propertyPath: m_Offset.y
+      value: -5.0836687
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
