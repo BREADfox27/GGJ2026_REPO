@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    public void PLaySFX(int sfxIndex)
+    public void PlaySFX(int sfxIndex)
     {
         sfxSource.PlayOneShot(sfxList[sfxIndex]);
     }

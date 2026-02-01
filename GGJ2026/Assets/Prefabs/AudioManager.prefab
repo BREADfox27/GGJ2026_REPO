@@ -306,13 +306,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   musicList:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 535d9e37a0c3f0241a855bf0f89b69e5, type: 3}
   - {fileID: 0}
   sfxList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: d2eeb221083dd454688e62b4eacf5152, type: 3}
+  - {fileID: 8300000, guid: bb745ec2638bedb41b73a1ce7a0c94dc, type: 3}
+  - {fileID: 8300000, guid: 4864dde3281c07c46a4614d6b307407c, type: 3}
+  - {fileID: 8300000, guid: 212d61986d8d8db4587a3c14a6dc9267, type: 3}
+  - {fileID: 8300000, guid: 6661e837abdbdec4c80ef7e828a67310, type: 3}
   musicSource: {fileID: 355189549018005510}
   sfxSource: {fileID: 2269851179070894049}
 --- !u!1 &7165201595202598942

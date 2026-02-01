@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         playerRb.linearVelocity = new Vector2(horizontalInput * speed, playerRb.linearVelocity.y);
+        AudioManager.Instance.PlaySFX(4);
     }
 
     void Jump()
@@ -91,16 +92,19 @@ public class PlayerController : MonoBehaviour
                 pastMask.SetActive(true);
                 presentMask.SetActive(false);
                 futureMask.SetActive(false);
+                AudioManager.Instance.PlaySFX(1);
                 break;
             case TimeLine.PRESENT:
                 pastMask.SetActive(false);
                 presentMask.SetActive(true);
                 futureMask.SetActive(false);
+                AudioManager.Instance.PlaySFX(1);
                 break;
             case TimeLine.FUTURE:
                 pastMask.SetActive(false);
                 presentMask.SetActive(false);
                 futureMask.SetActive(true);
+                AudioManager.Instance.PlaySFX(1);
                 break;
         }
     }

@@ -62,6 +62,7 @@ public class Door : MonoBehaviour
             {
                 Unlock();
                 collision.gameObject.GetComponent<ItemCollectionController>().ConsumeHoldingItem();
+                AudioManager.Instance.PlaySFX(2);
             }
             
         }
