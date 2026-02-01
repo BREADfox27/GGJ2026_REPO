@@ -73,7 +73,7 @@ public class LevelManager : MonoBehaviour
             player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + TIME_Y_OFFSET * 2);
         }
 
-        //player.ChangeSprite(TimeLine.PAST);
+        player.ChangeSprite(TimeLine.PAST);
     }
 
     public void GoToPresent()
@@ -92,7 +92,7 @@ public class LevelManager : MonoBehaviour
             player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + TIME_Y_OFFSET);
         }
 
-        //player.ChangeSprite(TimeLine.PRESENT);
+        player.ChangeSprite(TimeLine.PRESENT);
 
     }
 
@@ -112,7 +112,7 @@ public class LevelManager : MonoBehaviour
             player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y - TIME_Y_OFFSET);
         }
 
-        //player.ChangeSprite(TimeLine.FUTURE);
+        player.ChangeSprite(TimeLine.FUTURE);
     }
 
     public void RegisterDoor(Door door)
