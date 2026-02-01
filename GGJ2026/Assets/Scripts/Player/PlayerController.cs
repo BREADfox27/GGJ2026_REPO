@@ -65,7 +65,6 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         playerRb.linearVelocity = new Vector2(horizontalInput * speed, playerRb.linearVelocity.y);
-        AudioManager.Instance.PlaySFX(4);
     }
 
     void Jump()
@@ -107,5 +106,10 @@ public class PlayerController : MonoBehaviour
                 AudioManager.Instance.PlaySFX(1);
                 break;
         }
+    }
+
+    public void WalkingSound()
+    {
+        AudioManager.Instance.PlaySFX(4);
     }
 }

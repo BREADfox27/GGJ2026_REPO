@@ -37,6 +37,7 @@ public class ItemCollectionController : MonoBehaviour
         if (other.CompareTag("Item"))
         {
             interactedItem = null;
+            AudioManager.Instance.PlaySFX(3);
         }
     }
 
